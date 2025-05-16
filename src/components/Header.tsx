@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Ai, Cloud } from "lucide-react";
+import { Cloud } from "lucide-react";
 
 const Header: React.FC = () => {
   return (

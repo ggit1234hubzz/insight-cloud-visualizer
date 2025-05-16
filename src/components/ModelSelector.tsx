@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-import { Ai } from "lucide-react";
+import { Cloud } from "lucide-react";
 
 export interface ModelOption {
   id: string;
@@ -44,7 +44,7 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
     <Card className="p-6 border border-border shadow-sm">
       <div className="flex items-center gap-3 mb-4">
         <div className="rounded-full bg-primary/10 p-2">
-          <Ai className="h-5 w-5 text-primary" />
+          <Cloud className="h-5 w-5 text-primary" />
         </div>
         <h3 className="text-lg font-semibold">Select AI Model</h3>
       </div>

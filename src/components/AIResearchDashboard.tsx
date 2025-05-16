@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import FileUpload from "./FileUpload";
 import ModelSelector, { ModelOption } from "./ModelSelector";
@@ -78,13 +77,13 @@ const mockProcessFile = (file: File, modelId: string): Promise<AnalysisResult[]>
             title: "Detailed Text Analysis",
             summary: "Complete analysis of the document content including entities, language style, and readability metrics.",
             type: "text",
-            data: {
-              wordCount: 1250,
-              readability: "College level",
-              topEntities: ["Cloud AI", "Machine Learning", "Data Analysis"],
-              languageStyle: "Technical, Informational",
-              readingTime: "5 minutes"
-            }
+            data: [
+              { name: "Word Count", value: "1250" },
+              { name: "Readability", value: "College level" },
+              { name: "Top Entities", value: "Cloud AI, Machine Learning, Data Analysis" },
+              { name: "Language Style", value: "Technical, Informational" },
+              { name: "Reading Time", value: "5 minutes" }
+            ]
           }
         ]);
       } else if (modelId === "image-classification" || modelId === "object-detection") {
@@ -149,10 +148,10 @@ const mockProcessFile = (file: File, modelId: string): Promise<AnalysisResult[]>
             title: "Analysis Results",
             summary: "Basic analysis completed successfully.",
             type: "text",
-            data: {
-              status: "completed",
-              confidence: "high"
-            }
+            data: [
+              { name: "Status", value: "Completed" },
+              { name: "Confidence", value: "High" }
+            ]
           }
         ]);
       }
